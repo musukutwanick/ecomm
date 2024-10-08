@@ -1,0 +1,637 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    
+}
+
+body {
+   /* background-image: url("background.jpg");
+   background-color: antiquewhite;
+    background-size:contain;
+    background-repeat: repeat; */
+    background-color: rgb(245, 244, 248);
+    
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: auto; /* Change to auto to fit content */
+}
+
+.logo {
+    width: 200px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+nav {
+    display: flex;
+    width: 90%;
+    height: 70px;
+    margin: 10px;
+    padding: 1px 0;
+    align-items: center;
+    justify-content: space-between;
+  
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 5px 10px;
+    position:relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 25px; /* Increase font size for better visibility */
+    padding: 20px; /* Add padding around links */
+    transition:0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active
+  {
+    color: blue;
+} 
+nav ul li a.active::after,
+nav ul li a:hover::after{
+    content:"";
+    width:30%;
+    height:2px;
+    background:rgb(7, 5, 12);
+    position:absolute;
+    bottom:-4px;
+    left:20px;
+}
+
+.First {
+    position: relative;
+    width: 100%;
+    height: auto; /* Fit content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    opacity: 0.9; /* Slightly transparent to give a nice effect */
+    padding: 20px 0;
+}
+
+.First h1 {
+    font-size: 4em; /* Large headline */
+    color:black;
+    margin-bottom: 20px;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and scale */
+}
+
+
+.First p {
+    font-size: 1.5em; /* Description size */
+    margin-bottom: 20px;
+    color:black;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.First h2{
+        font-size: 3em;
+        margin-bottom: 10px;
+        color:black;
+
+    }
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden; /* Ensure only horizontal overflow is hidden */
+    }
+    
+    .slider {
+        width: 100%;
+        height: 45vh; /* Make slider thinner */
+        overflow: hidden;
+        position: relative; /* Position relative for absolute positioning of slides */
+    }
+    
+    .slides {
+        display: flex;
+        animation:slide 40s linear infinite; /* Slow and continuous animation */
+    }
+    
+    .slides img {
+        width: auto; /* Smaller size to show more images at once */
+        height: 100%;
+        margin: 0 10px;
+
+    }
+    
+    @keyframes slide {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-100%); } /* Moves one full width of the viewport */
+    }
+    .shop-now {
+        text-align: center; /* Center the button */
+        margin: 20px 0; /* Space above and below the button */
+    }
+    
+    .shop-now-button {
+        display: inline-block;
+        padding: 25px 50px; /* Padding for the button */
+        background-color: #2d2b2e; /* Button color */
+        color: rgb(188, 158, 199); /* Text color */
+        text-decoration: none; /* Remove underline */
+        font-size: 2em; /* Increase font size */
+        border-radius: 5px; /* Rounded corners */
+        transition: background-color 0.3s; /* Smooth transition */
+    }
+    
+    .shop-now-button:hover {
+        background-color: #0056b3; /* Darker blue on hover */
+    }
+    .section-p1 {
+        padding:40px 80px;
+    }
+    #feature {
+        display: flex;
+        align-items: flex-start; /* Align items to the start */
+        justify-content: space-around; /* Space around items */
+        flex-wrap: wrap; /* Allow items to wrap into the next line if needed */
+        padding: 20px; /* Optional: Add padding to the section */
+    }
+    
+    .featured-heading {
+        width: 100%; /* Full width for the heading */
+        text-align: center; /* Center the heading */
+        font-size: 2.5em; /* Size of the heading */
+        margin-bottom: 20px; /* Space below the heading */
+        color: #333; /* Color of the heading */
+    }
+    
+    #feature .fe-box {
+        width: 400px; /* Adjusted width for 4 in a row */
+        text-align: center;
+        padding: 20px 10px; /* Reduced padding for tighter spacing */
+        box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+        border: 1px solid;
+        border-radius: 4px;
+        margin: 10px; /* Reduced margin for spacing between boxes */
+        background-color: #cbd0d1; /* Background color behind the image */
+    }
+    
+    #feature .fe-box:hover {
+        box-shadow: 10px 10px 54px rgba(0, 0, 0, 0.03); /* Adjust shadow on hover */
+    }
+    
+    #feature .fe-box h4 {
+        display: inline-block;
+        padding: 9px 8px 6px 8px;
+        line-height: 1.2; /* Adjust line height for better spacing */
+        border-radius: 4px;
+    }
+    
+    #feature .fe-box .rating {
+        color: gold; /* Color for the stars */
+        font-size: 1.2em; /* Size of the stars */
+        margin: 5px 0; /* Space around the rating */
+        background-color: #fff; /* Background color for rating section */
+        padding: 5px 0; /* Padding around the rating */
+        border-radius: 4px; /* Optional: rounded corners for rating background */
+    }
+    
+    #feature .fe-box .price {
+        font-size: 1.5em; /* Price size */
+        color: #000; /* Price color */
+        margin-top: 5px; /* Space above the price */
+    }
+    
+    #feature .fe-box img {
+        width: 100%; /* Make the image take the full width of the box */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 4px; /* Optional */
+        cursor:pointer;
+    }
+
+    #banner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 40px 20px; /* Add padding for space around the content */
+        background-image:url("background1.jpg");
+    }
+    
+    #banner h4 {
+        margin-bottom: 20px; /* Space below the Repair Services heading */
+        font-size:3em;
+    }
+    
+    #banner h2 {
+        font-size: 4em; /* Increase the font size for the main heading */
+        margin: 10px 0; /* Space above and below the heading */
+    }
+    
+    #banner h2 span {
+        font-weight: bold; /* Make the "20% off" text bold */
+        color: #ff0000; /* Optional: Change color for emphasis */
+    }
+    
+    #banner button {
+        margin-top: 20px; /* Space above the button */
+        padding: 25px 50px; /* Padding for the button */
+        font-size: 1.7em; /* Increase button font size */
+        background-color: #262727; /* Button background color */
+        color: rgb(193, 176, 201); /* Button text color */
+        border: none; /* Remove border */
+        border-radius: 5px; /* Rounded corners */
+        cursor: pointer; /* Pointer cursor on hover */
+        transition: background-color 0.3s; /* Smooth transition for hover effect */
+    }
+    button.white {
+        margin-top: 20px; /* Space above the button */
+        padding: 25px 50px; /* Padding for the button */
+        font-size: 13px; /* Increase button font size */
+        font-weight:600;
+        background-color:transparent/* Button background color */
+       
+     }
+
+ #banner button:hover {
+        background-color: #0056b3; /* Darker blue on hover */
+    }
+
+#sn-banner{
+        display:flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+    }
+
+#sn-banner .banner-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 40px 20px; /* Add padding for space around the content */
+        background-image:url("buy.jpeg");
+        width: 800px;
+        height:50vh;
+        background-size:cover;
+        background-position:center;
+        padding:30px;
+     }
+
+#sn-banner .banner-box2{
+        background-image:url("swap.jpeg");
+    }
+
+    #sn-banner h4{
+        color:#fff;
+        font-size:2em;
+        font-weight:300;
+    }
+ #sn-banner h2{
+         color:#fff;
+         font-size:2.5em;
+         font-weight:800;
+        }
+
+ #sn-banner span{
+         color:#fff;
+         font: size 1.6em;
+         font-weight:500;
+        padding-bottom:15px;
+            }
+
+            #sn-banner .banner-box:hover button{
+                background:#0056b3;
+                border:1px solid;
+            }
+            #banner3 {
+                display: flex; /* Use flexbox for horizontal layout */
+                justify-content: space-between; /* Space between the boxes */
+                flex-wrap: wrap; /* Allow wrapping if necessary */
+                padding: 0 80px; /* Padding around the section */
+            }
+            
+            .banner-box { 
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                padding: 20px; /* Adjusted padding for space around the content */
+                min-width: 30%; /* Minimum width for each box */
+                height: 30vh; /* Height of each box */
+                background-image: url("twen.jpeg");
+                background-size: cover; /* Cover the entire box */
+                background-position: center; /* Center the background image */
+                margin-bottom: 20px; /* Space below each box */
+            }
+            
+            .banner-box2 {
+                background-image: url("friday.jpeg");
+            }
+            
+            .banner-box3 {
+                background-image: url("delivery.jpeg");
+            }
+            
+            #banner3 h2 {
+                color: #fff; /* Heading color */
+                font-weight: 900; /* Font weight */
+                font-size: 2em; /* Font size */
+            }
+            
+            #banner3 h3 {
+                color: #fff; /* Subheading color */
+                font-weight: 800; /* Font weight */
+                font-size: 1.5em; /* Font size */
+            }
+
+    footer{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content: space-between;
+}
+
+footer .col{
+    display:flex;
+    flex-direction:column;
+    flex-wrap:wrap;
+    align-items:flex-start;
+    margin-bottom:20px;
+}
+
+footer .logo{
+    margin-bottom:30px;
+}
+
+footer h4{
+    font-size:2em;
+   
+ padding-bottom:30px
+}
+
+footer p{
+    font-size:1.5em;
+    margin: 0 0 8px 0;
+}
+
+footer p{
+    font-size:1.2em;
+    text-decoration:none;
+    color:black;
+    margin-bottom:20px;
+}
+
+footer a {
+    margin-bottom: 30px; /* Adjust the value to increase space */
+    text-decoration: none; /* Ensure links are not underlined */
+    color: black; /* Link color */
+    font-size:1.2em;
+}
+
+footer .follow i:hover,
+footer a:hover{
+    color:#0056b3;
+}
+
+footer .copyright{
+    width:100%;
+    text-align:center;
+}
+
+.row img {
+    width: 400px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+.Second{
+background-image:url("wallpa.jpeg");
+width: 100%;
+height:40vh;
+background-size:cover;
+display:flex;
+justify-content: center;
+text-align: center;
+flex-direction:column;
+padding:14px;
+
+}
+.Second h1{
+    color:antiquewhite;
+    font-size:3em;
+}
+.Second p{
+    color:antiquewhite;
+    font-size:2em;
+}
+
+#prodetails .single-pro-image {
+    width: 35%;
+    margin-right: 50px;
+}
+
+#prodetails .single-pro-image {
+    width: 35%;
+    margin-right: 50px;
+}
+
+#prodetails {
+    display: flex;
+    margin-top: 20px;
+}
+
+#prodetails .single-pro-details {
+    width: 50%;
+    padding-top: 30px;
+}
+
+#prodetails .single-pro-details h4 {
+    padding: 50px 0 20px 0;
+    font-size:2em
+}
+
+#prodetails .single-pro-details h2 {
+    font-size: 30px;
+}
+
+#prodetails .single {
+    display: block;
+    width:150px;
+    height:47px;
+    padding: 5px 10px;
+    margin-bottom: 10px;  /* Adjusted margin */
+}
+
+#prodetails .single-pro-details input{
+    width: 50px;
+    height: 50px;
+    padding-left: 10px;
+    font-size: 18px;
+    margin-right: 10px;
+    margin-bottom: 10px; /* Added margin for spacing */
+}
+.single-pro-details h6{
+    font-size:3em;
+}
+#prodetails .normal {
+    background: #1e683f;
+    color: #fff;  /* Made text color white */
+    padding: 20px 40px; /* Added padding for better appearance */
+    border: none; /* Optional: remove border */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+#prodetails .single-pro span {
+    line-height: 40px;
+    font-size:1em;
+}
+
+
+#repair.gallery {
+    padding: 20px; /* Padding for gallery section */
+    text-align: center; /* Center align text */
+    justify-content: center;
+}
+
+.grid-container {
+    display: flex;
+    grid-template-rows: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Gap between grid items */
+    justify-content: center; /* Center the grid items horizontally */
+    
+    
+}
+
+.grid-item {
+    background-color: white; /* White background for items */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 15px; /* Padding for item */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.grid-item img {
+    width: 400px; /* Full width image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Rounded corners for images */
+    height: 400px; /* Set a maximum height for images */
+    object-fit: cover; /* Ensure images cover the area without distortion */
+}
+
+.contact-info {
+    margin-top: 20px; /* Space above the contact info */
+    font-size: 18px; /* Font size for the message */
+    font-weight: bold; /* Bold text for emphasis */
+    color: #333; /* Dark color for text */
+}
+
+
+
+.banner-box {
+    background-color: azure; /* Background color for the banner */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+}
+
+.white {
+    background-color: white; /* Button background */
+    color: black; /* Button text color */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding for button */
+    border-radius: 5px; /* Rounded corners for button */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.white:hover {
+    background-color: #ddd; /* Change background on hover */
+}
+
+.details {
+    padding: 20px;
+    text-align: center; /* Center align text */
+}
+
+.product-images {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center images */
+    gap: 20px; /* Space between images */
+    margin: 20px 0; /* Margin for spacing */
+}
+
+.product-image {
+    width: 400px; /* Set a width for the images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Rounded corners for images */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.details h2{
+    color: #333; /* Dark color for headings */
+    font-size:3em;
+} 
+
+.details p{
+    color: #333; /* Dark color for headings */
+    font-size:1.2em;
+} 
+
+    
+
+
+button {
+    margin-top: 20px; /* Space above button */
+    padding: 25px 60px; /* Padding for button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.buy-button {
+    background-color: #007bff; /* Blue background for Buy button */
+}
+
+.buy-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+
+
+
+
+#dete .details {
+    padding: 20px;
+    text-align: center; /* Center align text */
+}
+
+.details h2{
+    color:black;
+    font-size:3em; 
+}
+
+.details p {
+    color:black;
+    font-size:2em; 
+    padding:20px;
+}
+
+.details h3 {
+    color:black;
+    font-size:2.5em; 
+    padding:20px;
+}
+
+.detail ul li{
+    color:black;
+    font-size:2.5em; 
+    padding:20px;
+
+}
