@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+
+
     
 }
 
@@ -33,6 +35,7 @@ nav {
     padding: 1px 0;
     align-items: center;
     justify-content: space-between;
+    zoom:70%;
   
 }
 
@@ -60,8 +63,8 @@ nav ul li a.active
 nav ul li a.active::after,
 nav ul li a:hover::after{
     content:"";
-    width:30%;
-    height:2px;
+    width:2px;
+    height:1px;
     background:rgb(7, 5, 12);
     position:absolute;
     bottom:-4px;
@@ -80,6 +83,7 @@ nav ul li a:hover::after{
     color: white;
     opacity: 0.9; /* Slightly transparent to give a nice effect */
     padding: 20px 0;
+    zoom:75%;
 }
 
 .First h1 {
@@ -117,28 +121,42 @@ nav ul li a:hover::after{
     
     .slides {
         display: flex;
-        animation:slide 40s linear infinite; /* Slow and continuous animation */
+        animation: slide 40s linear infinite; /* Slow and continuous animation */
+    }
+    
+    .slide {
+        position: relative; /* Position relative for the button */
     }
     
     .slides img {
-        width: auto; /* Smaller size to show more images at once */
+        width: 350px; /* Smaller size to show more images at once */
         height: 100%;
         margin: 0 10px;
-
+        transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition for opacity and transform */
     }
     
+    
+    .slide:hover img {
+        opacity: 0.5; /* Dim the image on hover */
+        transform: scale(1.05); /* Slightly scale the image for a zoom effect */
+    }
+    
+    
     @keyframes slide {
-        0% { transform: translateX(0); }
+       0% { transform: translateX(0%); }
         100% { transform: translateX(-100%); } /* Moves one full width of the viewport */
     }
-    .shop-now {
-        text-align: center; /* Center the button */
-        margin: 20px 0; /* Space above and below the button */
+    @keyframes slowDown {
+        0% { animation-duration: 40s; }
+        100% { animation-duration: 80s; } /* Slows down the animation */
     }
+    
+   
+     
     
     .shop-now-button {
         display: inline-block;
-        padding: 25px 50px; /* Padding for the button */
+        padding: 10px 20px; /* Padding for the button */
         background-color: #2d2b2e; /* Button color */
         color: rgb(188, 158, 199); /* Text color */
         text-decoration: none; /* Remove underline */
@@ -146,10 +164,15 @@ nav ul li a:hover::after{
         border-radius: 5px; /* Rounded corners */
         transition: background-color 0.3s; /* Smooth transition */
     }
-    
+    .shop-now {
+        text-align: center; /* Center the button */
+        margin: 20px 0; /* Space above and below the button */
+    }
     .shop-now-button:hover {
         background-color: #0056b3; /* Darker blue on hover */
     }
+    
+    
     .section-p1 {
         padding:40px 80px;
     }
@@ -159,6 +182,7 @@ nav ul li a:hover::after{
         justify-content: space-around; /* Space around items */
         flex-wrap: wrap; /* Allow items to wrap into the next line if needed */
         padding: 20px; /* Optional: Add padding to the section */
+        zoom:67%;
     }
     
     .featured-heading {
@@ -221,6 +245,7 @@ nav ul li a:hover::after{
         text-align: center;
         padding: 40px 20px; /* Add padding for space around the content */
         background-image:url("background1.jpg");
+        zoom:80%;
     }
     
     #banner h4 {
@@ -266,6 +291,7 @@ nav ul li a:hover::after{
         display:flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        zoom:75%;
 
     }
 
@@ -276,8 +302,9 @@ nav ul li a:hover::after{
         align-items: flex-start;
         padding: 40px 20px; /* Add padding for space around the content */
         background-image:url("buy.jpeg");
-        width: 800px;
-        height:50vh;
+        width: 900px;
+        height:600px;
+        
         background-size:cover;
         background-position:center;
         padding:30px;
@@ -285,6 +312,10 @@ nav ul li a:hover::after{
 
 #sn-banner .banner-box2{
         background-image:url("swap.jpeg");
+        height:600px;
+        width: 900px;
+       
+        
     }
 
     #sn-banner h4{
@@ -300,15 +331,25 @@ nav ul li a:hover::after{
 
  #sn-banner span{
          color:#fff;
-         font: size 1.6em;
+         font: size em;
          font-weight:500;
         padding-bottom:15px;
             }
 
             #sn-banner .banner-box:hover button{
+                transition: background-color 0.5s; /* Smooth transition */
                 background:#0056b3;
                 border:1px solid;
+                padding: 30px 60px;
+                font-size: 1ems;
+              
+                
             }
+            #sn-banner .white{
+        color:black;
+        font-size:1.5em;
+            }
+
             #banner3 {
                 display: flex; /* Use flexbox for horizontal layout */
                 justify-content: space-between; /* Space between the boxes */
@@ -322,26 +363,33 @@ nav ul li a:hover::after{
                 justify-content: center;
                 align-items: flex-start;
                 padding: 20px; /* Adjusted padding for space around the content */
-                min-width: 30%; /* Minimum width for each box */
-                height: 30vh; /* Height of each box */
+                min-width: 15%; /* Minimum width for each box */
+                height: 250px; /* Height of each box */
                 background-image: url("twen.jpeg");
                 background-size: cover; /* Cover the entire box */
                 background-position: center; /* Center the background image */
                 margin-bottom: 20px; /* Space below each box */
+                zoom:80%;
             }
             
             .banner-box2 {
                 background-image: url("friday.jpeg");
+                zoom:80%;
+                height: 250px;
+                
             }
             
             .banner-box3 {
                 background-image: url("delivery.jpeg");
+                zoom:80%;
+                height: 250px;
+             
             }
             
             #banner3 h2 {
                 color: #fff; /* Heading color */
                 font-weight: 900; /* Font weight */
-                font-size: 2em; /* Font size */
+                font-size: 1em; /* Font size */
             }
             
             #banner3 h3 {
@@ -354,6 +402,7 @@ nav ul li a:hover::after{
         display:flex;
         flex-wrap:wrap;
         justify-content: space-between;
+        zoom:67%;
 }
 
 footer .col{
@@ -428,6 +477,13 @@ padding:14px;
     font-size:2em;
 }
 
+#prodetails {
+    display: flex;
+    margin-top: 20px;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    zoom:67%;
+}
+
 #prodetails .single-pro-image {
     width: 35%;
     margin-right: 50px;
@@ -487,7 +543,9 @@ padding:14px;
 #prodetails .single-pro span {
     line-height: 40px;
     font-size:1em;
-}
+}s
+
+
 
 
 #repair.gallery {
@@ -634,4 +692,136 @@ button:hover {
     font-size:2.5em; 
     padding:20px;
 
+}
+
+/*tablet*/
+@media only screen and (max-width: 914px){
+
+    .slider {
+        width: 100%;
+        height: 200px; /* Set a fixed height for the slider */
+        overflow: hidden;
+        position: relative;
+    }
+.slides {
+    display: flex;
+    animation: slide 40s linear infinite;
+}
+.slides img {
+    width: 200px;
+    height: auto; /* Let height adjust automatically */
+    
+    object-fit: cover;
+    margin: 0 10px;
+}
+
+#feature {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    zoom: 65%;
+}
+#banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    background-image: url("background1.jpg");
+    zoom: 60%;
+}
+#sn-banner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    zoom: 35%;
+}
+
+#banner3 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 80px;
+    zoom:0%;
+}
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    zoom: 40%;
+}
+
+
+}
+@media only screen and (max-width: 667px){
+    #feature {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 20px;
+        zoom: 60%;
+    }  
+    #sn-banner {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        zoom: 32%;
+    }
+    #banner3 {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 0 80px;
+        zoom: 38%;
+    }
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        zoom: 39%;
+    }
+   /* Media Query for iPhone XR */
+
+    #prodetails {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+    }
+
+    #prodetails .single-pro-image {
+        width: 100%; /* Full width on small screens */
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 20px; /* Add bottom margin for spacing */
+    }
+
+    #prodetails .single-pro-details {
+        width: 100%; /* Full width on small screens */
+        padding-top: 20px; /* Adjust padding */
+    }
+
+    #prodetails .single-pro-details h4 {
+        font-size: 1.5em; /* Smaller font size */
+    }
+
+    #prodetails .single-pro-details h2 {
+        font-size: 24px; /* Smaller font size */
+    }
+
+    #prodetails .single {
+        width: 100%; /* Full width for buttons */
+        height: auto; /* Adjust height */
+    }
+
+    #prodetails .single-pro-details input {
+        width: 100%; /* Full width for input */
+        height: auto; /* Adjust height */
+        font-size: 16px; /* Smaller font size */
+    }
+
+    .single-pro-details h6 {
+        font-size: 2em; /* Smaller font size */
+    }
 }
